@@ -16,6 +16,7 @@ TextView with custom attribute for fontName, so that fontName can be specified i
   
   dependencies{
       implementation 'com.github.nswalke:NvStyleableTextView:1.0.3'
+      
       // compile 'com.github.nswalke:NvStyleableTextView:1.0.3' //for older versions of gradle
   }
   
