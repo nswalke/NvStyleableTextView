@@ -1,12 +1,34 @@
 # NvStyleableTextView
 TextView with custom attribute for fontName, so that fontName can be specified in xml layout itself.
-
 #########################################
+	How to install:
+  
+  Add these line to your project level build.gradle
+  
+  allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+  
+  Add this line to your module level build.gradle
+  
+  dependencies{
+      implementation 'com.github.nswalke:NvStyleableTextView:1.0.3'
+      // compile 'com.github.nswalke:NvStyleableTextView:1.0.3' //for older versions of gradle
+  }
+  
+#########################################
+
+How to use:
+
+Extend NvStyleableTextView class and override the two abstract methods as explained later below.
 
 Add the following nameSpace to parent/container view
 xmlns:app="http://schemas.android.com/apk/res-auto"
 
-Extend NvStyleableTextView class and add the view to your layout as follows:
+Add the view to your layout as follows:
   <com.yourcompany.YourStyleableTextView
   android:layout_width="wrap_content"
   android:layout_height="wrap_content"
@@ -17,6 +39,9 @@ The attribute 'app:nvFontName' specifies the exact non-qualified case-sensitive 
 of the .ttf font-file as an explicit string value or a reference to a string resource.
 
 You can call setFont(strFontName) or setFont(fontNameStringResId) to set fontName in your code.
+
+You need to include yout font files (.ttf) in assets folder and define those file names in string resources.
+eg. Arial.ttf in assets folder. And <string name="font_arial">Arial.ttf</string> in strings.xml
 
 *****Note that no specific code has been written to handle bold, italic, normal textStyles.
 
