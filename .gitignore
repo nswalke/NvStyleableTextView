@@ -5,10 +5,9 @@
 /.idea/modules.xml
 /.idea/workspace.xml
 /build
+/gradle
 /NvStyleableTextView/build
 /gradle.properties
-/gradlew
-/gradlew.bat
 /local.properties
 .DS_Store
 /captures
