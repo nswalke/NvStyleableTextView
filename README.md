@@ -1,5 +1,5 @@
 # NvStyleableTextView
-TextView with custom attribute for fontName, so that fontName can be specified in xml layout itself.
+TextView, Button, EditText with custom attribute for fontName, so that fontName can be specified in xml layout itself.
 #########################################
 	How to install:
   
@@ -15,13 +15,19 @@ TextView with custom attribute for fontName, so that fontName can be specified i
   Add this line to your module level build.gradle
   
   dependencies{
-      implementation 'com.github.nswalke:NvStyleableTextView:1.0.3'
+      implementation 'com.github.nswalke:NvStyleableTextView:1.0.4'
       
-      // compile 'com.github.nswalke:NvStyleableTextView:1.0.3' //for older versions of gradle
+      // compile 'com.github.nswalke:NvStyleableTextView:1.0.4' //for older versions of gradle
   }
   
 #########################################
 
+Available classes: NvStyleableTextView, NvStyleableButton, NvStyleableEditText
+
+
+All three can be used in similar way, as explained below.
+
+#########################################
 How to use:
 
 Extend NvStyleableTextView class and override the two abstract methods as explained later below.

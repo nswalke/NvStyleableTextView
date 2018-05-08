@@ -4,11 +4,11 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.AppCompatEditText;
 import android.util.AttributeSet;
 
 /**
- * Custom TextView with custom xml attribute to specify font in xml layout
+ * Custom EditText with custom xml attribute to specify font in xml layout
  * ***
  * ***
  * add the following nameSpace to parent/container view
@@ -16,7 +16,7 @@ import android.util.AttributeSet;
  * <p>
  * <p>
  * Extend this class and add the view to your layout as follows:
- * <com.yourcompany.YourStyleableTextView
+ * <com.yourcompany.YourStyleableEditText
  * android:layout_width="wrap_content"
  * android:layout_height="wrap_content"
  * android:text="@string/hello_world"
@@ -26,19 +26,19 @@ import android.util.AttributeSet;
  * The attribute 'app:nvFontName' specifies the exact non-qualified case-sensitive name
  * of the .ttf font-file as an explicit string value or a reference to a string resource
  */
-public abstract class NvStyleableTextView extends AppCompatTextView {
-    public NvStyleableTextView(Context context) {
+public abstract class NvStyleableEditText extends AppCompatEditText {
+    public NvStyleableEditText(Context context) {
         super(context);
     }
 
-    public NvStyleableTextView(Context context, AttributeSet attrs) {
+    public NvStyleableEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
         if (!isInEditMode()) {
             setFont(context, attrs);
         }
     }
 
-    public NvStyleableTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public NvStyleableEditText(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         if (!isInEditMode()) {
             setFont(context, attrs);
