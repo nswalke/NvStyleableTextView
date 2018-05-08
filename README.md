@@ -15,9 +15,9 @@ TextView, Button, EditText with custom attribute for fontName, so that fontName 
   Add this line to your module level build.gradle
   
   dependencies{
-      implementation 'com.github.nswalke:NvStyleableTextView:1.0.4'
+      implementation 'com.github.nswalke:NvStyleableTextView:1.0.5'
       
-      // compile 'com.github.nswalke:NvStyleableTextView:1.0.4' //for older versions of gradle
+      // compile 'com.github.nswalke:NvStyleableTextView:1.0.5' //for older versions of gradle
   }
   
 #########################################
@@ -30,7 +30,7 @@ All three can be used in similar way, as explained below.
 #########################################
 How to use:
 
-Extend NvStyleableTextView class and override the two abstract methods as explained later below.
+Extend NvStyleableTextView class and override the abstract method as explained later below.
 
 Add the following nameSpace to parent/container view
 xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -47,12 +47,12 @@ of the .ttf font-file as an explicit string value or a reference to a string res
 
 You can call setFont(strFontName) or setFont(fontNameStringResId) to set fontName in your code.
 
-You need to include yout font files (.ttf) in assets folder and define those file names in string resources.
+You need to include your font files (.ttf) in assets folder and define those file names in string resources.
 eg. Arial.ttf in assets folder. And <string name="font_arial">Arial.ttf</string> in strings.xml
 
-*****Note that no specific code has been written to handle bold, italic, normal textStyles.
+*****Note that no specific code has been written to handle bold, italic, normal textStyles. You can include separate font files for bold, italic, normal.
 
-Override these abstract methods:
+Override following methods:
 
 /**
      * Get default font name. If font name is not given in xml layout, this will be passed on to
@@ -76,4 +76,6 @@ Override these abstract methods:
      * @return Typeface instance corresponding to the given fontName.
      */
     @Nullable
-    public abstract Typeface getFont(String fontName, Context context);
+    public Typeface getFont(String fontName, Context context){
+    //release 1.0.5 contains implementation of this method. You may override and comment out super call, to write your own implementation.
+    }

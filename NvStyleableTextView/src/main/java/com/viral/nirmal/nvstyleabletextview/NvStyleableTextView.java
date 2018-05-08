@@ -100,13 +100,13 @@ public abstract class NvStyleableTextView extends AppCompatTextView {
 
     /**
      * Get Typeface instance representing the given font name. Return null to avoid setting font.
-     * For good performance, create a HashMap<fontName,typeface> in your Application subClass and initialize it with
-     * all your typefaces present in assets folder. Use those values here, rather than creating new typeface every time.
      *
-     * @param fontName name of the desired font
+     * @param fontName name of the font-file in assets folder. eg Arial.ttf
      * @param context  Context instance
      * @return Typeface instance corresponding to the given fontName.
      */
     @Nullable
-    public abstract Typeface getFont(String fontName, Context context);
+    public Typeface getFont(String fontName, Context context) {
+        return NvStyleableUtil.getInstance().getFontFromAsset(fontName, context);
+    }
 }
