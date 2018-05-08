@@ -22,3 +22,9 @@
 -keep public class com.viral.nirmal.nvstyleabletextview.NvStyleableTextView {
     <methods>;
 }
+-keep public class com.viral.nirmal.nvstyleabletextview.NvStyleableButton {
+    <methods>;
+}
+-keep public class com.viral.nirmal.nvstyleabletextview.NvStyleableEditText {
+    <methods>;
+}
